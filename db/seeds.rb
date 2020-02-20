@@ -8,12 +8,17 @@
 require 'faker'
 
 10.times do
-  Sub.create(name:Faker::Artist.name)
+  sub = Sub.create(name:Faker::Artist.name)
+  15.times do
+    sub.topics.create(name:Faker::Movies::StarWars.character, body:Faker::GreekPhilosophers.quote)
+  end
+  
 end
-Sub.create(name:'React')
-Sub.create(name:'Animals')
-Sub.create(name:'Javascript')
-Sub.create(name:'HTML')
-Sub.create(name:'CSS')
-Sub.create(name:'Angular JS')
-Sub.create(name:'Rails')
+
+# Sub.create(name:'React')
+# Sub.create(name:'Animals')
+# Sub.create(name:'Javascript')
+# Sub.create(name:'HTML')
+# Sub.create(name:'CSS')
+# Sub.create(name:'Angular JS')
+# Sub.create(name:'Rails')

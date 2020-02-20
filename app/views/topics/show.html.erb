@@ -1,2 +1,14 @@
 <h1>Topics#show</h1>
-<p>Find me in app/views/topics/show.html.erb</p>
+<p>Name: <%= @topic.name %> </p>
+<p>Body: <%= @topic.body %> </p>
+
+<p> this is from the sub <%= @sub.name%></p>
+
+<%= %>
+
+<%= link_to 'Edit Topic', edit_sub_topic_path([@sub, @topic])%>
+<%= link_to 'Delete Topic', sub_topic_path method:delete %>
+<%= link to 'Back', sub_topics_path(@sub)%>
+<%= link_to 'Add Comment', new_topic_comment_path(@topic)%>
+delete topic
+back to Topics
