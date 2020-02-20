@@ -1,0 +1,6 @@
+<%= form_for @sub do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+<h3><%= link_to 'Go back', subs_path%>
