@@ -1,2 +1,11 @@
 <h1>Subs#index</h1>
 <p>Find me in app/views/subs/index.html.erb</p>
+
+<h3><%= link_to 'Create a new Entry', new_sub_path %></h3>
+<% @subs.each do |sub| %>
+<h3> <%= sub.name %></h3>
+  <%= link_to "View #{sub.name}", sub %>
+  <%# <%= link_to "view #{sub.name}", sub_path(sub) %>
+  <%= link_to 'Edit', edit_sub_path(sub) %>
+  <%= link_to 'Delete', sub_path(sub), method: :delete %>
+<% end %>
